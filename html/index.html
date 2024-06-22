@@ -116,6 +116,10 @@
                 showOverlay,
                 overlayRule: overlays[overlayType],
                 zoomTo,
+                callback: function(map) {
+                    map.map.easeTo({center: [-73.9945823, 40.730032], zoom: 11}); 
+                    map.enableMap();
+                }
             });
 
             function addressSearch() {
