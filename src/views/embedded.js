@@ -137,6 +137,8 @@ export class EmbeddedDistrictr {
                     };
 
                     this.disableMap();
+
+                    if (!!module.callback) module.callback(this);
                 });
             })
             .catch(e => {
