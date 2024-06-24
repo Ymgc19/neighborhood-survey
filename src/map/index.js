@@ -7,7 +7,7 @@ export class MapState {
             container: mapContainer,
             style: mapStyle,
             attributionControl: false,
-            minZoom: 10,
+            minZoom: 3,
             pitchWithRotate: false,
             dragPan: true,
             touchZoomRotate: true,
