@@ -1,8 +1,8 @@
 STATE = "MA"
 COUNTIES = c("Suffolk", "Middlesex", "Norfolk", "Essex", "Plymouth")
 TILESET_ID = "boston"
-MAPBOX_SECRET_TOKEN = ""
-MAPBOX_USERNAME = ""
+MAPBOX_SECRET_TOKEN = "sk.eyJ1IjoieW1nYzE5IiwiYSI6ImNtOTZwcjBweDFodHYycHF6Z2loNW1jOXEifQ.c-diiZWytHm61S08tWe-ow"
+MAPBOX_USERNAME = "ymgc19"
 
 library(tidycensus)
 library(tidyverse)
@@ -34,7 +34,7 @@ mbtile_name = paste0("R/data/", TILESET_ID, ".mbtiles")
 tippecanoe(d, mbtile_name, layer_name="blocks",
            min_zoom=10, max_zoom=12,
            other_options="--coalesce-densest-as-needed --detect-shared-borders --use-attribute-for-id=GEOID")
-cat("Vector tiles created.\n")
+
 
 
 upload_tiles(input=mbtile_name, access_token=MAPBOX_SECRET_TOKEN,
