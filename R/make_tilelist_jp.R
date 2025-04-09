@@ -7,7 +7,7 @@ library(mapboxapi)
 library(simplecensus)
 library(mapview)
 
-MAPBOX_SECRET_TOKEN = "sk.eyJ1IjoieW1nYzE5IiwiYSI6ImNtOTZwcjBweDFodHYycHF6Z2loNW1jOXEifQ.c-diiZWytHm61S08tWe-ow"
+MAPBOX_SECRET_TOKEN = "sk.eyJ1IjoieW1nYzE5IiwiYSI6ImNtOTlhOWtybDA5eXMyanNkb3Rjbm9tNzkifQ.KQj5b0Gd-JoHtFTcIzsz8w"
 MAPBOX_USERNAME = "ymgc19"
 
 # 東京のshpデータ
@@ -90,7 +90,7 @@ upload_tiles(
   multipart = TRUE
 )
 
-spec <- read_json("assets/boston.json", simplifyVector = TRUE)
+spec <- read_json("assets/tokyo.json", simplifyVector = TRUE)
 spec$units$bounds <- matrix(st_bbox(d), nrow = 2, byrow = TRUE)
 spec$units$tilesets$source.url <- str_glue("mapbox://{MAPBOX_USERNAME}.{TILESET_ID}")
 write_json(spec, paste0("assets/", TILESET_ID, ".json"))
