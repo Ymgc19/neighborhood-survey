@@ -1,8 +1,8 @@
 var map; 
 
-var MAPBOX_TOKEN = "pk.eyJ1IjoiY21jY2FydGFuIiwiYSI6ImNrZGdkdW9waTA1eGEycmxycnQzZ3o4c3kifQ.v_XViAm-nItfHgx0J3Xg3A";
-var SPECIFICATION = "https://corymccartan.github.io/neighborhood-survey/assets/boston.json";
-var ADJACENCY_GRAPH = "https://corymccartan.github.io/neighborhood-survey/assets/boston_graph.json";
+var MAPBOX_TOKEN = "pk.eyJ1IjoieW1nYzE5IiwiYSI6ImNseWZ3ODc1MTAzbDQyanBvZTN6OTg2Y3gifQ.CzsGY4FHHyoiV8YgGK65bA";
+var SPECIFICATION = "https://corymccartan.github.io/neighborhood-survey/assets/tokyo.json";
+var ADJACENCY_GRAPH = "https://corymccartan.github.io/neighborhood-survey/assets/tokyo_graph.json";
 
 Qualtrics.SurveyEngine.addOnload(function() {
     this.disableNextButton();
