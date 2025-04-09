@@ -86,7 +86,7 @@ upload_tiles(
   access_token = MAPBOX_SECRET_TOKEN,
   username = MAPBOX_USERNAME,
   tileset_id = TILESET_ID,
-  tileset_name = paste0(TILESET_ID, "_z10_z12"),
+  tileset_name = paste0(TILESET_ID, "tokyo"),
   multipart = TRUE
 )
 
@@ -94,5 +94,4 @@ spec <- read_json("assets/tokyo.json", simplifyVector = TRUE)
 spec$units$bounds <- matrix(st_bbox(d), nrow = 2, byrow = TRUE)
 spec$units$tilesets$source.url <- str_glue("mapbox://{MAPBOX_USERNAME}.{TILESET_ID}")
 write_json(spec, paste0("assets/", TILESET_ID, ".json"))
-cat("Specification written.\n")
 
